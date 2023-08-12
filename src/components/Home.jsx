@@ -3,6 +3,7 @@ import { Cart, Footer, Hero, Navbar, Sales, Stories } from '../components'
 import {heroapi,popularsales,toprateslaes,highlight,sneaker,story,footerAPI} from "../data/data.js"
 import FlexContent from '../components/FlexContent'
 import ProductSlider from '../components/ProductSlider'
+import { Toaster } from 'react-hot-toast'
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
     <FlexContent endpoint={sneaker}/>
     <Stories story={story} />
     <Footer footerAPI={footerAPI} />
+    <Toaster/>
    </main>
    </>
   )

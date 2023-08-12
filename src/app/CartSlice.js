@@ -21,10 +21,11 @@ const CartSlice = createSlice({
       state.cartState = action.payload.cartState;
     },
     setAddItemToCart: (state, action) => {
+      const userExist = localStorage.getItem('user');
       const itemIndex = state.cartItems.findIndex(
         (item) => item.id === action.payload.id
       );
-
+     if(userExist){
       if (itemIndex >= 0) {
         state.cartItems[itemIndex].cartQuantity += 1;
 
@@ -37,6 +38,10 @@ const CartSlice = createSlice({
       }
 
       localStorage.setItem("cart", JSON.stringify(state.cartItems));
+     }else{
+      toast.error("Please login first.");
+
+     }
     },
 
     setRemoveItemFromCart: (state, action) => {

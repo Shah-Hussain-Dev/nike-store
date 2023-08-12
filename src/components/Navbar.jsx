@@ -28,7 +28,6 @@ const Navbar = () => {
     );
   };
 
-  console.log("user login", currentUser);
   const onNavScroll = () => {
     if (window.scrollY > 30) {
       setNavState(true);
@@ -52,7 +51,6 @@ const Navbar = () => {
         if(!getUser)
         setCurrentUser(result.user);
         localStorage.setItem('user', JSON.stringify(result.user));
-        console.log(result);
       })
       .catch((error) => {
         console.log("Error", error);
@@ -67,6 +65,8 @@ const Navbar = () => {
     setIsOpen(false)
    signOut(auth)
    localStorage.removeItem('user');
+   localStorage.removeItem('cart');
+   location.reload();
   }
   return (
     <>

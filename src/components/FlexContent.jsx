@@ -1,8 +1,10 @@
 import React from 'react'
+import ScrollAnimation from 'react-animate-on-scroll'
 
 const FlexContent = ({ifExists,endpoint:{title,heading,subtitle,text,img,url,btn}}) => {
   return (
-    <div className={`flex items-center justify-between lg:flex-col lg:justify-center nike-container ${ifExists ? 'flex-row-reverse':'flex-row'}`}>
+   <>
+     <div className={`flex items-center justify-between lg:flex-col lg:justify-center nike-container ${ifExists ? 'flex-row-reverse':'flex-row'}`} >
         <div className='max-w-lg lg:max-w-none w-full md:text-center grid items-center lg:justify-items-center '>
             <h1 className='text-gradient text-5xl sm:text-3xl font-bold cursor-pointer animate__animated animate__animated animate__zoomIn'>{heading}</h1>
             <h1 className='text-5xl lg:text-4xl md:text-3xl sm:text-2xl font-bold animate__animated animate__animated animate__zoomIn cursor-pointer text-slate-900 filter drop-shadow-lg'>{title}</h1>
@@ -17,6 +19,7 @@ const FlexContent = ({ifExists,endpoint:{title,heading,subtitle,text,img,url,btn
             />
         </div>
     </div>
+   </>
   )
 }
 

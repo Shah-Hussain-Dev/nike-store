@@ -16,11 +16,11 @@ const style = {
 };
 
 const ProductSlider =() => (
- <div className=' nike-container  mt-7'>
+ <div className=' nike-container  mt-7' >
    <div
   className='flex flex-col justify-center items-center  h-[50vh] xsm:hidden md:hidden animate__animated animate__zoomInUp'
   >
-      <Title title={""} />
+      
     <Carousel  height={460} width={950}  yOrigin={42} yRadius={48} autoPlay={true} className="" style={{display:'flex',alignItems:'center'}}>
       <div key={1} style={style}>
         <img alt="product1" src={product1}  className='hover:-rotate-12 transition-all transition-transform filter drop-shadow-xl'/>
